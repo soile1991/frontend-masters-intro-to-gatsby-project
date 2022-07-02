@@ -1,9 +1,10 @@
-import * as React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import * as React from 'react';
+import { Link, useStaticQuery, graphql } from 'gatsby';
+import { Seo } from '../components/seo';
 
 export default function IndexPage() {
 
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query GetSiteTitle {
         site {
           siteMetadata {
@@ -11,19 +12,20 @@ export default function IndexPage() {
           }
         }
       }
-    `)
+    `);
 
-    const meta = data?.site?.siteMetadata ?? {};
+  const meta = data?.site?.siteMetadata ?? {};
 
-    return (
-        <>
-            <header>
-                <Link to="/">{meta.title}</Link>
-            </header>
-            <main>
-                <h1>Hello Panos</h1>
-                <Link to="/about">About us</Link>
-            </main>
-        </>
-    )
+  return (
+    <>
+      <Seo />
+      <header>
+        <Link to='/'>{meta.title}</Link>
+      </header>
+      <main>
+        <h1>Hello Panos</h1>
+        <Link to='/about'>About us</Link>
+      </main>
+    </>
+  );
 }
