@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
-import { Seo } from './seo';
-import { header, content } from '../styles/layout.module.css';
+import { Link } from 'gatsby';
 import '../styles/global.css';
 import Layout from './layout';
 
