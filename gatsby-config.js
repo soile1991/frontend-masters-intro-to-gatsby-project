@@ -12,6 +12,7 @@ module.exports = {
         'trackingId': 'test',
       },
     },
+    'gatsby-plugin-postcss',
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',

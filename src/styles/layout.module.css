@@ -1,25 +1,12 @@
 .header {
-    background: var(--black);
-    color: var(--white);
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
+    @apply bg-black text-white flex justify-between p-4;
 }
 
-.header a {
-    color: inherit;
-    display: inline-block;
-    padding: 0.5rem;
-    text-decoration: none;
-}
-
-.header a:focus,
-.header a:hover {
-    background: var(--white);
-    color: var(--black);
+.link {
+    @apply text-inherit inline-block p-2 no-underline
+    hover:bg-white hover:text-black focus:bg-white focus:text-black;
 }
 
 .content {
-    margin: 3rem auto;
-    max-width: 54ch;
+    @apply mx-12 max-w-2xl;
 }

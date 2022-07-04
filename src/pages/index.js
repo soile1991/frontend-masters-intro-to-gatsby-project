@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import { imageWrapper } from '../styles/index.module.css';
+import { imageWrapper, link } from '../styles/index.module.css';
 
 export default function IndexPage() {
 
@@ -28,7 +28,6 @@ export default function IndexPage() {
 
   return (
     <Layout>
-
       <div className={imageWrapper}>
         <StaticImage
           src='../images/ivana-la-61jg6zviI7I-unsplash.jpg'
@@ -39,13 +38,13 @@ export default function IndexPage() {
         />
       </div>
       <h1>Hello Panos</h1>
-      <Link to='/about'>About us</Link>
+      <Link className={link} to='/about'>About us</Link>
 
       <h2>Check out my recent blog posts</h2>
       <ul>
         {posts.map(post => (
           <li key={post.id}>
-            <Link to={post.slug}>{post.frontmatter.title}</Link>{' '}
+            <Link className={link} to={post.slug}>{post.frontmatter.title}</Link>{' '}
             <small>By: {post.frontmatter.author}</small>{' '}
             <small>{post.frontmatter.date}</small>
           </li>

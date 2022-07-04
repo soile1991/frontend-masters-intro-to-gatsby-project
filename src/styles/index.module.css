@@ -1,11 +1,13 @@
 .image-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @apply flex items-center justify-center;
 }
 
 
 .image-wrapper [data-gatsby-image-wrapper] {
-    border: 3px solid var(--black);
-    border-radius: 50%;
+    @apply rounded-full border-4 border-gray-500;
+}
+
+.link {
+    @apply text-blue-500 inline-block p-2 no-underline
+    hover:bg-white hover:text-black focus:text-black transition-all duration-200 ease-in-out;
 }

@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
 :root {
     --black: #333;
     --gray: #555;
@@ -10,15 +16,11 @@
 
 html,
 body {
-    color: var(--gray);
-    font-family: -apple-system, BlinkMacSystemFont, "Sego UI", Roboto, Oxygen,
-    Ubuntu, Cantrell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: 18px;
-    line-height: 1.4;
+    @apply text-gray-600 text-lg font-sans
 }
 
 body {
-    margin: 0;
+    @apply m-0;
 }
 
 h1,
